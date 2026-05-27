@@ -1,0 +1,43 @@
+tests/
+├── auth/
+│   ├── login.spec.ts           @auth @smoke
+│   ├── refresh-token.spec.ts   @auth
+│   ├── register.spec.ts        @auth               //later
+│   ├── profile.spec.ts         @auth @me
+│   └── password-reset.spec.ts  @auth               //later
+├── units/
+│   ├── get-units.spec.ts       @units @smoke
+│   ├── create-unit.spec.ts     @units
+│   ├── favourite-units.spec.ts @units @favourites
+│   └── my-units.spec.ts        @units @me
+│
+├── orders/
+│   ├── create-order.spec.ts    @orders
+│   ├── my-orders.spec.ts       @orders @me
+│   └── order-status.spec.ts    @orders
+│
+├── proposes/
+│   ├── create-propose.spec.ts  @proposes
+│   └── propose-status.spec.ts  @proposes
+│
+├── search/
+│   └── search.spec.ts          @search @smoke
+│
+├── category/
+│   └── categories.spec.ts      @category @smoke
+│
+└── reviews/
+    └── reviews.spec.ts         @reviews
+
+api/
+└── endpoints/
+    ├── auth.ts
+    ├── units.ts
+    ├── orders.ts
+    ├── proposes.ts
+    ├── search.ts
+    └── reviews.ts
+
+helpers/
+├── auth-helper.ts    ← функція getAuthToken() для всіх тестів
+└── data-factory.ts   ← генерація тестових даних
