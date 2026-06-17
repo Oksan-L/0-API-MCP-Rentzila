@@ -9,3 +9,5 @@
 
 - один файл
 `npx playwright test tests/auth/login.spec.ts`
+
+- orders потрібно запускати `--workers=1`
